@@ -1,0 +1,13 @@
+Cross join
+SELECT * FROM employees CROSS JOIN orders.
+Inner join
+SELECT * FROM `products` INNER JOIN productlines
+Left join
+SELECT * FROM payments LEFT JOIN customers ON customers.customerNumber=payments.customerNumber
+Right join
+SELECT * FROM `offices` RIGHT JOIN customers ON customers.`city`=offices.`city`
+Self join
+SELECT e.lastName,e.firstName,e.employeeNumber,e.reportsTo,m.firstName,m.lastName,m.employeeNumber,m.reportsTo FROM `employees` e INNER JOIN employees m ON m.employeeNumber=e.reportsTo
+Union
+SELECT `firstName` FROM employees WHERE `officeCode`=4 UNION SELECT `firstName` FROM employees WHERE `officeCode`=2
+
